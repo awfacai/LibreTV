@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>正在跳转...</title>
+  <title>跳转中...</title>
   <style>
     body {
       margin: 0;
@@ -13,56 +13,41 @@
       display: flex;
       align-items: center;
       justify-content: center;
-    }
-
-    .container {
-      text-align: center;
-      animation: fadeIn 1.5s ease-in-out;
+      flex-direction: column;
     }
 
     h1 {
-      font-size: 2.5em;
-      margin-bottom: 10px;
+      font-size: 2.2em;
       text-shadow: 0 0 10px #00ffe7, 0 0 20px #00ffe7;
-    }
-
-    p {
-      font-size: 1.2em;
+      margin-bottom: 20px;
     }
 
     a {
       color: #00ffe7;
       text-decoration: none;
       border-bottom: 1px dashed #00ffe7;
+      font-size: 1.2em;
     }
 
     a:hover {
       text-shadow: 0 0 5px #00ffe7;
     }
 
-    @keyframes fadeIn {
-      from { opacity: 0; transform: scale(0.95); }
-      to { opacity: 1; transform: scale(1); }
-    }
-
     @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>未来之门已开启...</h1>
-    <p>如果没有自动跳转，请点击 <a href="https://awei.nyc.mn" target="_blank">这里</a>。</p>
-  </div>
+  <h1>正在进入未来世界...</h1>
+  <p>如果没有自动跳转，请点击 <a href="https://awei.nyc.mn" target="_blank">这里</a>。</p>
 
   <script>
-    // 自动在新标签页打开链接
-    window.onload = function () {
-      const win = window.open("https://awei.nyc.mn", "_blank");
-      // 如果浏览器阻止弹窗，用户可以手动点击链接
-      if (!win) {
-        console.warn("浏览器阻止了自动跳转，请手动点击链接。");
+    // 尝试触发跳转（尽可能早）
+    setTimeout(() => {
+      const newWindow = window.open("https://awei.nyc.mn", "_blank");
+      if (!newWindow) {
+        console.warn("浏览器拦截了弹窗，需要用户手动点击链接。");
       }
-    }
+    }, 100); // 等个 100ms 增加成功率
   </script>
 </body>
 </html>
