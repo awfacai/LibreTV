@@ -2,48 +2,58 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <meta http-equiv="refresh" content="3;url=https://awei.nyc.mn">
+  <meta http-equiv="refresh" content="0;url=https://awei.nyc.mn">
   <title>正在跳转...</title>
   <style>
     body {
-      background-color: #f4f6f8;
-      font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-      color: #333;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
       margin: 0;
+      height: 100vh;
+      background: radial-gradient(ellipse at center, #0f0c29, #302b63, #24243e);
+      font-family: 'Orbitron', sans-serif;
+      color: #00ffe7;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
     }
+
     .container {
       text-align: center;
-      padding: 20px;
-      border-radius: 12px;
-      background-color: #fff;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      animation: fadeIn 1.5s ease-in-out;
     }
+
+    h1 {
+      font-size: 2.5em;
+      margin: 0 0 10px;
+      text-shadow: 0 0 10px #00ffe7, 0 0 20px #00ffe7;
+    }
+
+    p {
+      font-size: 1.2em;
+    }
+
     a {
-      color: #007bff;
+      color: #00ffe7;
       text-decoration: none;
-      font-weight: bold;
+      border-bottom: 1px dashed #00ffe7;
     }
+
     a:hover {
-      text-decoration: underline;
+      text-shadow: 0 0 5px #00ffe7;
     }
-    .message {
-      font-size: 18px;
-      margin-top: 10px;
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.95); }
+      to { opacity: 1; transform: scale(1); }
     }
+
+    @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
   </style>
 </head>
 <body>
   <div class="container">
-    <h2>正在跳转至新页面...</h2>
-    <p class="message">
-      如果没有自动跳转，请点击
-      <a href="https://awei.nyc.mn">这里</a>。
-    </p>
+    <h1>马上带你进入未来世界...</h1>
+    <p>如果没有自动跳转，请点击 <a href="https://awei.nyc.mn">这里</a>。</p>
   </div>
 </body>
 </html>
