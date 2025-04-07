@@ -13,7 +13,6 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      overflow: hidden;
     }
 
     .container {
@@ -23,7 +22,7 @@
 
     h1 {
       font-size: 2.5em;
-      margin: 0 0 10px;
+      margin-bottom: 10px;
       text-shadow: 0 0 10px #00ffe7, 0 0 20px #00ffe7;
     }
 
@@ -48,16 +47,22 @@
 
     @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
   </style>
-  <script>
-    window.onload = function () {
-      window.open("https://awei.nyc.mn", "_blank");
-    }
-  </script>
 </head>
 <body>
   <div class="container">
-    <h1>即将进入未来世界...</h1>
-    <p>如果没有自动打开新页面，请点击 <a href="https://awei.nyc.mn" target="_blank">这里</a>。</p>
+    <h1>未来之门已开启...</h1>
+    <p>如果没有自动跳转，请点击 <a href="https://awei.nyc.mn" target="_blank">这里</a>。</p>
   </div>
+
+  <script>
+    // 自动在新标签页打开链接
+    window.onload = function () {
+      const win = window.open("https://awei.nyc.mn", "_blank");
+      // 如果浏览器阻止弹窗，用户可以手动点击链接
+      if (!win) {
+        console.warn("浏览器阻止了自动跳转，请手动点击链接。");
+      }
+    }
+  </script>
 </body>
 </html>
