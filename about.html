@@ -2,7 +2,7 @@
 <html lang="zh-CN">
 <head>
   <meta charset="UTF-8">
-  <title>未来世界 · 跳转中...</title>
+  <title>正在进入未来世界...</title>
   <style>
     body {
       margin: 0;
@@ -14,6 +14,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
+      text-align: center;
     }
 
     h1 {
@@ -22,15 +23,22 @@
       margin-bottom: 20px;
     }
 
-    a {
+    a, .home-button {
       color: #00ffe7;
       font-size: 1.2em;
       text-decoration: none;
-      border-bottom: 1px dashed #00ffe7;
+      border: 1px dashed #00ffe7;
+      padding: 10px 20px;
+      margin: 10px;
+      border-radius: 8px;
+      transition: all 0.3s ease;
+      display: inline-block;
     }
 
-    a:hover {
-      text-shadow: 0 0 5px #00ffe7;
+    a:hover, .home-button:hover {
+      background: #00ffe7;
+      color: #000;
+      box-shadow: 0 0 15px #00ffe7;
     }
 
     @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap');
@@ -38,7 +46,11 @@
 </head>
 <body>
   <h1>正在进入未来世界...</h1>
-  <p>如果没有自动跳转，请点击 <a id="jump" href="https://awei.nyc.mn" target="_blank">这里</a>。</p>
+  <p>
+    如果没有自动跳转，请点击
+    <a id="jump" href="https://awei.nyc.mn" target="_blank">这里进入</a>
+  </p>
+  <a class="home-button" href="/">← 返回首页</a>
 
   <script>
     window.onload = function () {
